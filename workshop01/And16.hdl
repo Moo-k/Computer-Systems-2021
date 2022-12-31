@@ -1,0 +1,80 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/And16.hdl
+
+/**
+ * 16-bit bitwise And:
+ * for i = 0..15: out[i] = (a[i] and b[i])
+ */
+
+CHIP And16 {
+    IN a[16], b[16];
+    OUT out[16];
+
+    PARTS:
+    // Put your code here:
+    Nand(a=a[0], b=b[0], out=a1);
+    Nand(a=a[0], b=b[0], out=b1);
+    Nand(a=a1, b=b1, out=out[0]);
+
+    Nand(a=a[1], b=b[1], out=a2);
+    Nand(a=a[1], b=b[1], out=b2);
+    Nand(a=a2, b=b2, out=out[1]);
+
+    Nand(a=a[2], b=b[2], out=a3);
+    Nand(a=a[2], b=b[2], out=b3);
+    Nand(a=a3, b=b3, out=out[2]);
+
+    Nand(a=a[3], b=b[3], out=a4);
+    Nand(a=a[3], b=b[3], out=b4);
+    Nand(a=a4, b=b4, out=out[3]);
+
+    Nand(a=a[4], b=b[4], out=a5);
+    Nand(a=a[4], b=b[4], out=b5);
+    Nand(a=a5, b=b5, out=out[4]);
+
+    Nand(a=a[5], b=b[5], out=a6);
+    Nand(a=a[5], b=b[5], out=b6);
+    Nand(a=a6, b=b6, out=out[5]);
+
+    Nand(a=a[6], b=b[6], out=a7);
+    Nand(a=a[6], b=b[6], out=b7);
+    Nand(a=a7, b=b7, out=out[6]);
+
+    Nand(a=a[7], b=b[7], out=a8);
+    Nand(a=a[7], b=b[7], out=b8);
+    Nand(a=a8, b=b8, out=out[7]);
+
+    Nand(a=a[8], b=b[8], out=a9);
+    Nand(a=a[8], b=b[8], out=b9);
+    Nand(a=a9, b=b9, out=out[8]);
+
+    Nand(a=a[9], b=b[9], out=a10);
+    Nand(a=a[9], b=b[9], out=b10);
+    Nand(a=a10, b=b10, out=out[9]);
+
+    Nand(a=a[10], b=b[10], out=a11);
+    Nand(a=a[10], b=b[10], out=b11);
+    Nand(a=a11, b=b11, out=out[10]);
+
+    Nand(a=a[11], b=b[11], out=a12);
+    Nand(a=a[11], b=b[11], out=b12);
+    Nand(a=a12, b=b12, out=out[11]);
+
+    Nand(a=a[12], b=b[12], out=a13);
+    Nand(a=a[12], b=b[12], out=b13);
+    Nand(a=a13, b=b13, out=out[12]);
+
+    Nand(a=a[13], b=b[13], out=a14);
+    Nand(a=a[13], b=b[13], out=b14);
+    Nand(a=a14, b=b14, out=out[13]);
+
+    Nand(a=a[14], b=b[14], out=a15);
+    Nand(a=a[14], b=b[14], out=b15);
+    Nand(a=a15, b=b15, out=out[14]);
+
+    Nand(a=a[15], b=b[15], out=a16);
+    Nand(a=a[15], b=b[15], out=b16);
+    Nand(a=a16, b=b16, out=out[15]);
+}
