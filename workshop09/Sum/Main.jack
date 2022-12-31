@@ -1,0 +1,14 @@
+class Main
+{
+    function void main()
+    {
+        var int a,b;
+
+        let a = Unix.readInt("");
+        let b = Unix.readInt("");
+        do Unix.printInt(a+b);
+        do Unix.println();
+
+        return;
+    }
+}

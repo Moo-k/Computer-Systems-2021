@@ -1,0 +1,36 @@
+class Main
+{
+    function void main()
+    {
+        var int temp, sum, num ;
+        var DP res, DPsum, DPnum ;
+        var String resStr ;
+        let temp = 1 ;
+        let sum = 0 ;
+        let num = 0 ;
+
+        while ( ~(temp = 0) )
+        {
+            let temp = Unix.readInt("") ;
+            let sum = sum + temp ;
+            if ( ~(temp = 0) )
+            {
+                let num = num + 1 ;
+            }
+        }
+
+
+        let res = DP.new(0) ;
+        let DPsum = DP.new(sum) ;
+        let DPnum = DP.new(num) ;
+        do DP.divide(res, DPsum, DPnum) ;
+
+
+        let resStr = DP.toString(res) ;
+
+        do Unix.printString(resStr);
+        do Unix.println();
+
+        return ;
+    }
+}
